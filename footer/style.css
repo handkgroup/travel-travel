@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+:root {
+    --dark-bg: #112a34;
+    --dark-color: #004047;
+    --light-color: #333;
+    --transition: all 0.3s ease;
+}
+
+body {
+    background: var(--dark-bg);
+    color: var(--white-color);
+    transition: var(--transition);
+}
+
+
+::selection {
+    background: var(--dark-color);
+    color: var(--white-color);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 90%;
+}
+
+/* Footer style start */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #112E47;
+    padding: 20px 60px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    border-radius: 50%;
+    border: 1px solid #01b1e0;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+  }
+  
+  .company-info {
+    text-align: center;
+  }
+  
+  .travel-company {
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: #ffffff;
+    -webkit-text-stroke: 0.2px #000;
+  }
+  
+  .megatour {
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: #ffffff;
+    -webkit-text-stroke: 0.5px #000;
+  }
+  
+  .icon-section {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+  }
+  .icon:hover {
+      transform: scale(1.15);
+  }
+  .right-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    padding-top: 40px;
+  }
+  
+  .link-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 20px;
+  }
+  
+  .topic  {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  .page  {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 15px;
+    padding-bottom:5px ;
+  }
+
+ .page::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background: #ffffff;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.5s ease-out;
+}
+
+ .page:hover::before {
+    transform: scaleX(1);
+}
+
+
+  
+  @media (max-width: 1024px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 40px;
+    }
+
+    .right-section {
+        padding-top: 20px;
+        width: 100%;
+    }
+
+    .link-column {
+        margin: 10px 0;
+    }
+
+    .left-section {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px 30px;
+    }
+
+    .right-section {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .link-column {
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .left-section {
+        margin-bottom: 15px;
+    }
+
+      
+  .left-section {
+    margin-right: 0px;
+  }
+
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .travel-company {
+        font-size: 8px;
+    }
+
+    .megatour {
+        font-size: 24px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .right-section {
+        padding-top: 15px;
+    }
+
+    .topic, .page {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    .footer {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .travel-company {
+        font-size: 6px;
+    }
+
+    .megatour {
+        font-size: 20px;
+    }
+
+    .icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .topic, .page {
+        font-size: 12px;
+    }
+}
+  
+/* Footer style end  */

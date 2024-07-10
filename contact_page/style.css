@@ -861,6 +861,7 @@ html {
 }
 /* Bottom CTA style end */
 
+
 /* Footer style start */
 
 .footer {
@@ -924,8 +925,11 @@ html {
   .icon {
     width: 40px;
     height: 40px;
+    transition: all 0.3s ease;
   }
-  
+  .icon:hover {
+      transform: scale(1.15);
+  }
   .right-section {
     display: flex;
     justify-content: space-between;
@@ -941,13 +945,39 @@ html {
     margin: 0 20px;
   }
   
-  .topic, .page {
-    font-family: "Inter-Medium", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
+  .topic  {
+    font-size: 20px;
+    font-weight: 700;
     color: #ffffff;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
+  .page  {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 15px;
+    padding-bottom:5px ;
+  }
+
+ .page::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background: #ffffff;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.5s ease-out;
+}
+
+ .page:hover::before {
+    transform: scaleX(1);
+}
+
+
   
   @media (max-width: 1024px) {
     .footer {
